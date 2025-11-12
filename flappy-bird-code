@@ -12,10 +12,10 @@ pygame.display.set_caption("Easy Flappy Bird 🐣")
 clock = pygame.time.Clock()
 
 # Colors
-BLUE = (135, 206, 235)
+BLUE = (100, 120, 235)
 GREEN = (0, 200, 0)
 WHITE = (255, 255, 255)
-BROWN = (150, 75, 0)
+PINK = (251, 116, 168)
 
 # Bird
 bird_x = 80
@@ -27,8 +27,8 @@ flap_strength = -9  # stronger flap
 
 # Pipes
 pipe_width = 70
-pipe_gap = 200      # bigger gap = easier
-pipe_speed = 3      # slower pipes
+pipe_gap = 250      # bigger gap = easier
+pipe_speed = 4       # slower pipes
 pipes = []
 
 def create_pipe():
@@ -46,7 +46,7 @@ game_over = False
 
 # Helper functions
 def draw_bird(x, y):
-    pygame.draw.circle(screen, BROWN, (x, int(y)), bird_radius)
+    pygame.draw.circle(screen, PINK, (x, int(y)), bird_radius)
 
 def draw_pipes(pipes):
     for top, bottom in pipes:
